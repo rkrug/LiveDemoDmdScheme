@@ -1,0 +1,156 @@
+---
+title: "Demo dmdScheme"
+subtitle: "dmdSchemes in action"
+author: "Rainer Krug"
+institute: "Department of Evolutionary Biology and Environmental Studies, UZH"
+date: "2019/09/03 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: inverse, center, middle
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+```
+
+```{css, echo=FALSE}
+/* custom.css */
+
+.title-slide.remark-slide-content:before{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  # content:url(https://zenodo.org/badge/DOI/10.5281/zenodo.3246326.svg);
+  height:60px;
+}
+
+.alert {
+  color: #FF0000;
+  text-align: center;
+  font-size: xx-large;
+  float: middle;
+}
+
+.dt {
+  font-size: x-small;
+  float: left;
+  bottom: 0;
+}]
+
+```
+
+# Background
+**`dmdScheme`** == Domainspecific MetaData Scheme
+
+---
+
+background-image: url(./fig/5141328136_16d8f73ee7_b_BW.jpg)
+background-size: cover
+Image credit: [randylane](http://randylane.com/wp-content/uploads/2014/09/5141328136_16d8f73ee7_b.jpg) 
+
+---
+
+background-image: url(./fig/5141328136_16d8f73ee7_b.jpg)
+background-size: cover
+Image credit: [randylane](http://randylane.com/wp-content/uploads/2014/09/5141328136_16d8f73ee7_b.jpg) 
+
+---
+
+background-image: url(./fig/scattered-thoughts.jpg)
+background-size: cover
+Image credit: [How To See Thoughts](http://howtoseethoughts.org/wp-content/uploads/2014/05/scattered-thoughts.jpg) 
+
+---
+class: middle
+
+## Two aspects
+--
+
+1. **Developing** a new Domain Specific MetaData Scheme
+--
+
+2. **Using** the new Domain Specific MetaData Scheme
+
+---
+class: top
+
+## Use programming language R
+
+--
+
+## Two packages
+
+--
+
+1. **scheme generator - developer - `dmdScheme`**
+
+  - template scheme, 
+  - base functionality for 
+      - entering, 
+      - validating and 
+      - exporting the metadata and 
+  - tools to develop new schemes and packages
+  
+--
+
+2. **actual scheme - user - e.g. `emeScheme`**
+
+  - a specific scheme and can contain
+  - additional functionality  for 
+      - entering, 
+      - validating and 
+      - exporting the metadata and
+  - additional specific tools
+
+---
+class: inverse, center, middle
+
+# How to develop <br/> a new Domain Specific MetaData Scheme
+(scheme) developer perspective  
+(basic) R knowledge necessary  
+
+---
+class: center, top
+
+<img src="./fig/workflow_newScheme.png" style="width: 68%" />
+
+---
+class: inverse, center, middle
+
+## Live Demo
+How to Develop a New Domain Specific MetaData Scheme
+
+---
+
+class: inverse, center, middle
+
+# How to use <br/> the new Domain Specific MetaData Scheme
+from a user / researcher perspective  
+no R knowledge necessary  
+basic GUI (shiny app) is available  
+also possible from R
+
+---
+class: center, top
+
+<img src="./fig/workflow_enterMetaData.png" style="width: 50%" />
+
+---
+class: inverse, center, middle
+
+# Live Demo
+How to Enter New MetaData
+
+---
+
+
+
+
+

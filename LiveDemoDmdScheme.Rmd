@@ -1,0 +1,71 @@
+---
+title: "Live Demo dmdScheme"
+author: "Rainer M Krug"
+date: "03 September 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Background
+
+## Why we do this
+
+## Structure
+
+## Workings of the R packages
+This would be from a developer perspective, and I do not think that is so interesting for you
+
+# How to develop a new Domain Specific Detadata Scheme
+
+## Background
+This is from the perspective of somebody / a group developing a new metadata scheme (domain specific scheme).
+
+## Flowchart
+```{r}
+knitr::include_graphics("./figures/workflow_newScheme.png")
+```
+
+## Live Demo
+
+# How to use a dmdScheme based Domain Specific Detadata Scheme
+
+## Enter  
+```{r}
+knitr::include_graphics("./figures/workflow_enterMetaData.png")
+```
+
+## Validate
+
+## Export the entered metadata
+This would be from a user / researcher perspective and not require any R knowledge, as a basic GUI (shiny app) is available to do these things. I could obviously also show how to do this from the R prompt, i.e. what the app is doing automatically.
+
+## Live Demo
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

@@ -1,0 +1,46 @@
+@startuml
+
+start
+''''''''''''
+:= Install scheme definitions in R
+we take `emeScheme` as an example
+**assuming, it is already on CRAN**
+..R code..
+""install.packages("emeScheme")"";
+''''''''''''
+:= Load `emeScheme` in R
+..R code..
+""library("emeScheme")"";
+''''''''''''
+:= Create new emeScheme metadata template
+* save it (here 'metadata_exp1.xlsx')
+..R code..
+""enter_new_metadata("emeScheme", file = "metadata_exp1.xlsx", format = TRUE)"";
+''''''''''''
+:= Enter emeScheme metadata in "metadata_exp1.xlsx"
+using for example
+* Excel or
+* Pages or
+* Libre Office or
+* ...;
+''''''''''''
+repeat
+  := Validate metadata
+  ..R code..
+  ""validate(x = "metadata_exp1.xlsx", path = ".", report = "html")"";
+  if (erros or warnings?) then (yes)
+    := Edit "metadata_exp1.xlsx" to fix
+    * errors (necessary)
+    * warnings (better);
+  else (no)
+  endif
+repeat while (metadata edited?) is (yes)
+-> no;
+''''''''''''
+:= Export as xml for archiving
+..R code..
+""dmdScheme_to_xml(x = 'metadata_exp1.xlsx', output = "metadata")"";
+''''''''''''
+stop
+
+@enduml
