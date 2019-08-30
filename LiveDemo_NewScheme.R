@@ -1,4 +1,3 @@
-
 # Install Package dmdScheme -----------------------------------------------
 
 
@@ -31,8 +30,10 @@ open_new_spreadsheet("dmdScheme", file = "newScheme.xlsx", keepData = TRUE, form
 
 
 ## Excel
+## unlock Worksheets
 ## Change name to theNewScheme
 ## Change Version to v0.1.0
+## Save Excel file
 
 
 # Create new Scheme Package -----------------------------------------------
@@ -41,16 +42,27 @@ open_new_spreadsheet("dmdScheme", file = "newScheme.xlsx", keepData = TRUE, form
 dev_make_new_scheme(schemeDefinition = 'newScheme.xlsx', path = '.')
 
 
-
 # Edit theNewScheme -------------------------------------------------------
 
 
 setwd("theNewScheme")
 devtools::load_all(".")
 
-## Edits in the Excel file
+readLines("DESCRIPTION")
+
+
+# Edit Excel file `newScheme.xml` -----------------------------------------
+
+## temperature to temperature_micro
+## increase veersion to v0.1.1
+## save file
+
+# Update theNewScheme package ---------------------------------------------
+
 
 dev_update_from_new_sheet("./../newScheme.xlsx")
+
+readLines("DESCRIPTION")
 
 
 # Build Package -----------------------------------------------------------
@@ -63,7 +75,9 @@ devtools::build("./theNewScheme")
 
 # Restart R ---------------------------------------------------------------
 
+
 .rs.restartR()
+
 
 # Load theNewScheme -------------------------------------------------------
 
@@ -96,3 +110,4 @@ open_new_spreadsheet("theNewScheme")
 # Questions ---------------------------------------------------------------
 
 
+ 
