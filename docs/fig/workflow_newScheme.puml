@@ -32,7 +32,7 @@ repeat
   ..R code..
   ""setwd("ROOT_DIRECTORY_OF_NEW_PACKAGE")""
   ""devtools::load_all('.')""
-  ""update_from_new_sheet(newDmdScheme = 'newSchemeCreated.xlsx')"";
+  ""dev_update_from_new_sheet(newDmdScheme = 'newSchemeCreated.xlsx')"";
 repeat while (next iteration of scheme development)
 ''''''''''''
 := Add additional functionality to the new package

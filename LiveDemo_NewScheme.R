@@ -2,7 +2,7 @@
 
 
 ## install.packages("remotes")
-## remotes::install_github("Exp-Micro-Ecol-Hub/dmdScheme", ref = "shinyapp", build_opts = "")
+## remotes::install_github("Exp-Micro-Ecol-Hub/dmdScheme", ref = "f012bca6231347b60073259cbfd7d8d31a4dc9ae", build_opts = "")
 
 ## later, it should as aeasy as:
 ## install.packages("dmdScheme")
@@ -23,7 +23,7 @@ open_new_spreadsheet("dmdScheme", keepData = TRUE)
 # Create and Open new Scheme for Definition ------------------------------------------
 
 
-open_new_spreadsheet("dmdScheme", file = "newScheme.xlsx", keepData = TRUE, format = TRUE)
+open_new_spreadsheet("dmdScheme", file = "newScheme.xlsx", keepData = TRUE)
 
 
 # Edit the newScheme in Excel ---------------------------------------------
