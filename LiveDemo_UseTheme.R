@@ -7,8 +7,8 @@
 ## later, it should as aeasy as:
 ## install.packages("dmdScheme")
 
-remotes::install_github("Exp-Micro-Ecol-Hub/emeScheme", ref = "dev", build_opts = "")
-remotes::install_github("Exp-Micro-Ecol-Hub/dmdScheme", ref = "dev", build_opts = "")
+remotes::install_github("Exp-Micro-Ecol-Hub/dmdScheme", ref = "af204cac2a3d701d1d5fb8e845d56563bd555374", build_opts = "")
+remotes::install_github("Exp-Micro-Ecol-Hub/emeScheme", ref = "593f35957f54bb93c7d6dadbcda9aff8a9832dbe", build_opts = "")
 
 ## remotes::install_github("Exp-Micro-Ecol-Hub/emeScheme", ref = "efdd9f7886146c127c90044e3879fef321c4499f", build_opts = "")
 
@@ -20,17 +20,19 @@ library(emeScheme)
 
 # Create example for this session -----------------------------------------
 
+make_example("basic", schemeName = "emeScheme")
 
 setwd("basic")
+
 
 # View Scheme Definition --------------------------------------------------
 
 read.csv("./data/archiving_data/smell.csv")
 
-# MetaData emeScheme basic example in Excel ---------------------------------------------
+# GUI Approach ------------------------------------------------------------
 
 
-open_new_spreadsheet("emeScheme")
+run_app()
 
 ## Experiment based
 ## Experiment sheet
@@ -40,6 +42,19 @@ open_new_spreadsheet("emeScheme")
 ## DataFileMetaData special
 
 ## data directory
+
+
+# R approach---------------------------------------------------------------
+
+
+.rs.restartR()
+
+library(emeScheme)
+
+# Open new scheme-------- ------------------------------------------------
+
+
+open_new_spreadsheet("emeScheme")
 
 
 # Validate Metadata -------------------------------------------------------
@@ -52,4 +67,7 @@ report("emeScheme.xlsx")
 
 # Export to xml -----------------------------------------------------------
 
-dmdScheme_to_xml("emeScheme.xlsx", )
+
+emeScheme_to_xml("emeScheme.xlsx", file = "test")
+
+

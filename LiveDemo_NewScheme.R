@@ -2,7 +2,8 @@
 
 
 ## install.packages("remotes")
-## remotes::install_github("Exp-Micro-Ecol-Hub/dmdScheme", ref = "f012bca6231347b60073259cbfd7d8d31a4dc9ae", build_opts = "")
+
+remotes::install_github("Exp-Micro-Ecol-Hub/dmdScheme", ref = "af204cac2a3d701d1d5fb8e845d56563bd555374", build_opts = "")
 
 ## later, it should as aeasy as:
 ## install.packages("dmdScheme")

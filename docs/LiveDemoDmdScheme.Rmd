@@ -1,9 +1,10 @@
 ---
 title: "Demo dmdScheme"
-subtitle: "dmdSchemes in action"
+subtitle: "dmdSchemes in action\n\nhttps://github.com/rkrug/LiveDemoDmdScheme"
 author: "Rainer Krug"
 institute: "Department of Evolutionary Biology and Environmental Studies, UZH"
 date: "2019/09/03 (updated: `r Sys.Date()`)"
+url: 
 output:
   xaringan::moon_reader:
     lib_dir: libs
