@@ -69,7 +69,7 @@ readLines("DESCRIPTION")
 # Build Package -----------------------------------------------------------
 
 
-setwd("..")
+setwd("../")
 
 devtools::build("./theNewScheme")
 
